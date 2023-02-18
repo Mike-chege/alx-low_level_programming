@@ -3,7 +3,7 @@
 /**
  * main - prints the alphabet in lowercse, and then uppercse,
  * followed by a new line
- * return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
