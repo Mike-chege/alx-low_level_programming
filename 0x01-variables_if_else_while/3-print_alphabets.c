@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 
 /**
  * main - prints the alphabet in lowercse, and then uppercse,
