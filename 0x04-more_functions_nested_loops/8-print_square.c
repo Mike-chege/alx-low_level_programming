@@ -4,7 +4,7 @@
  * print_square - prints a square, follwed by  new line;
  * @size: size of the square
  */
-vod print_square(int size)
+void print_square(int size)
 {
 	if (size <= 0)
 	{
