@@ -3,9 +3,9 @@
 
 /**
  * main - prints the numbers from 1 to 100, followed by a new line
- * but for multiple of three prints fizz instead of the number
- * and for the multiples of five prints buzz
- * Retur: Always 0 (Success)
+ * but for multiples of three prints Fizz instead of the number
+ * and for the multiples of five prints Buzz
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -25,10 +25,12 @@ int main(void)
 		} else if (i == 1)
 		{
 			printf("%d", i);
+		} else
+		{
+			printf(" %d", i);
 		}
 	}
 	printf("\n");
 
 	return (0);
 }
-
