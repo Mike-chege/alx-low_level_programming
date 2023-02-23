@@ -10,12 +10,6 @@
  * Return: void
  */
 void print_remaining_days(int month, int day, int year)
-/**
- * is_leap_year - checks if a year is a leap year
- * @year: year to check
- * Return: 1 if leap year, 0 otherwise
- */
-int is_leap_year(int year)
 {
 	if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
 	{
