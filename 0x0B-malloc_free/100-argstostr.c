@@ -48,8 +48,3 @@ char *argstostr(int ac, char **av)
 	arg[k] = '\0';
 	return (arg);
 }
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-
-
