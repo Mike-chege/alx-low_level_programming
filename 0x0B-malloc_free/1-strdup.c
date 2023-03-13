@@ -30,3 +30,4 @@ char *_strdup(char *str)
 		i++;
 
 	return (dup);
+}
