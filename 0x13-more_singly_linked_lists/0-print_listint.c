@@ -1,9 +1,8 @@
-#include<stdio.h>
 #include "list.h"
 
 /**
  * prints all elements of a listint_t
- * @next: points to the next node
+ * @next: a pointer to the head of the listint_list to print
  *
  * Return: the  number of nodes
  *
