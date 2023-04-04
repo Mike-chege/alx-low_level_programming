@@ -2,6 +2,8 @@
 
 /**
  * add_nodeint adds a new node at the beggining of a listinnt_list
+ * @head: pointer to the first node in the list
+ * @n: data to insert in that new node
  *
  * Return: the address of the new element, or NULL if it failed
  */
