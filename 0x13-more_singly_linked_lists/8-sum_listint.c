@@ -1,3 +1,5 @@
+#include<stdio.h>
+#include<stdlib.h>
 #include "lists.h"
 
 /**
@@ -9,16 +11,16 @@
 int sum_listint(listint_t *head)
 {
 	int sum;
-	listint_t *node;
+	listint_t *new_node;
 
 	sum = 0;
 	if (head == NULL)
 		return (sum);
-	node = head;
-	while (node != NULL)
+	new_node = head;
+	while (new_node != NULL)
 	{
-		sum += node->n;
-		node = node->next;
+		sum += new_node->n;
+		node = new_node->next;
 	}
 	return (sum);
 }
