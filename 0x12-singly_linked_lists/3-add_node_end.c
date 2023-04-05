@@ -3,6 +3,7 @@
 /**
  * add_node_end - adds a new node at the end of a linked list
  * @head: double pointer to the list_t list
+ * @string: neads to be duplicated
  *
  * Return: address of the new element, or NULL if it failed
  */
