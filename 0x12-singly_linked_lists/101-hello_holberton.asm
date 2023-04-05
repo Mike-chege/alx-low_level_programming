@@ -7,5 +7,4 @@ main:
 	  call  printf
 	  mov 	eax, 0
 	  ret
-format:
-	.ascii "Hello, Holberton\n",0
+format:	.ascii "Hello, Holberton\n\0"
