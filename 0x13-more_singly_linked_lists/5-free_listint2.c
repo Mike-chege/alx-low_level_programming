@@ -5,7 +5,6 @@
 /**
  * free_listint2 - frees a listint_t list
  * @head: head of linked list
- *
  * Return: void
  */
 
