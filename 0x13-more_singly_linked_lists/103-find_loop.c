@@ -1,3 +1,5 @@
+#include<stdio.h>
+#include<stdlib.h>
 #include "lists.h"
 
 /**
@@ -8,25 +10,24 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *slow = head;
-	listint_t *fast = head;
+	listint_t *one *zero = head;
 
 	if (!head)
 		return (NULL);
 
-	while (slow && fast && fast->next)
+	while (one && zero && zero->next)
 	{
-		fast = fast->next->next;
-		slow = slow->next;
-		if (fast == slow)
+		zero = zero->next->next;
+		one = one->next;
+		if (zero == one)
 		{
-			slow = head;
-			while (slow != fast)
+			one = head;
+			while (one != zero)
 			{
-				slow = slow->next;
-				fast = fast->next;
+				one = one->next;
+				zero = zero->next;
 			}
-			return (fast);
+			return (zero);
 		}
 	}
 
