@@ -20,7 +20,7 @@ int sum_listint(listint_t *head)
 	while (new_node != NULL)
 	{
 		sum += new_node->n;
-		node = new_node->next;
+		new_node = new_node->next;
 	}
 	return (sum);
 }
