@@ -2,8 +2,8 @@
 
 /**
  * clear_bit - sets the value of a bit to 0 at a given index
- * @a: pointer to the bit
- * @index: is the pointer to the bit.
+ * @n: pointer to the bit
+ * @index: The index position to change, starting from 0
  *
  * Return: -1 if an error occured or 1 if successful.
  */
