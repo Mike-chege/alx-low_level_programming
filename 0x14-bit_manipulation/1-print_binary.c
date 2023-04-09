@@ -1,7 +1,7 @@
 #include"main.h"
 
 /**
- * print_binary-prints the binary representation of a number
+ * print_binary - prints the binary representation of a number
  * @n: number to print in binary
  *
  * Return: void
@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 		bit = (n & (num << i)) ? 1 : 0;
 	      	if (bit || i == 63)
 		{
-	       		printf (bit + '0');
+	       		_putchar(bit + '0');
 		}
 	}
 }
