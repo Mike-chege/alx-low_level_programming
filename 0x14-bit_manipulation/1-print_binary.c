@@ -4,7 +4,7 @@
  * print_binary-prints the binary representation of a number
  * @n: number to print in binary
  *
- * Retrun: void
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
@@ -15,6 +15,8 @@ void print_binary(unsigned long int n)
 	{
 		bit = (n & (num << i)) ? 1 : 0;
 	      	if (bit || i == 63)
+		{
 	       		putchar (bit + '0');
+		}
 	}
 }
