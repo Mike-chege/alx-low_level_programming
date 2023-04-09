@@ -12,9 +12,10 @@ void print_binary(unsigned long int n)
 	for (i = 0; i < 64; i++)
 	{
 		bit = (n & num) ? 1 : 0;
+
 		if (bit || i == 63)
 		{
-			_putchar(bit + '0');
+			_putchar (bit + '0');
 		}
 		num <<= 1;
 	}
