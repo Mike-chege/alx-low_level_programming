@@ -1,12 +1,11 @@
 #include"main.h"
 
 /**
- * get_bit - returns the value if a bit at a give nindex
- * @: number to get bit from
- * @index: index of the bit to get, strating from 0
+ * get_bit - returns the value if a bit at a given index.
+ * @n: number to get bit from.
+ * @index: index of the bit to get, starting from 0.
  *
- * Return: value of the bit at index, or 
- * -1 if an error occurs
+ * Return: -1 if an error occurs or 1 if successful.
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
