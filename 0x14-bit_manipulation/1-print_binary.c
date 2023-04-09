@@ -10,15 +10,13 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int num = 1;
-	int i, bit;
-
-	for (i = 0; i < 64; i++)
+	
+	if (n <= 1)
 	{
-		bit = (n & (num << i)) ? 1 : 0;
-		if (bit || i == 64)
-		{
-			_putchar(bit + '0');
-		}
+		_putchar((n & num) + 48);
+		return;
 	}
+	print_binary(n >> 1);
+	_putchar((n & num) + 48);
 }
 
