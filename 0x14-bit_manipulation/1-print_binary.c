@@ -8,26 +8,13 @@
  */
 void print_binary(unsigned long int n)
 {
-	int num = 0;
-	unsigned long int bit = n;
+	unsigned long int num = 1;
+	int i, bit;
 
-	if (n==0)
+	for (i = 0; i < 64; i++)
 	{
-		_putchar('0');
-		return;
-	}
-	while (bit>0)
-	{
-		bit >>= 1;
-		num++;
-	}
-
-	for (num--;num >= 0; num--)
-	{
-		if ((n & (1 << num)) >> num)
-			_putchar('1);
-	
-	else
-		putchar('0');
+		bit = (n & (num << i)) ? 1 : 0;
+	      	if (bit || i == 63)
+	       		putchar (bit + '0');
 	}
 }
