@@ -9,15 +9,16 @@
  */
 void print_binary(unsigned long int n)
 {
-	if (n == 0)
+	unsigned long int num = 1;
+	int i, bit;
+
+	for (i = 0; i < 63; i++)
 	{
-		_putchar('0');
-		return;
-	}
-	
-	for (int i = 63; i >= 0; i--)
-	{
-		int bit = (n >> i) & 1;
-		_putchar(bit + '0');
+		bit = (n & (num << i)) ? 1 : 0;
+		if (bit || i == 63)
+		{
+			_putchar(bit + '0');
+		}
 	}
 }
+
