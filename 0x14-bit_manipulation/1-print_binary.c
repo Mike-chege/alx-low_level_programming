@@ -3,8 +3,6 @@
 /**
  * print_binary - prints the binary representation of a number
  * @n: number to print in binary
- *
- * Return: void
  */
 void print_binary(unsigned long int n)
 {
@@ -12,11 +10,8 @@ void print_binary(unsigned long int n)
     int i, bit;
 
     for (i = 0; i < 64; i++)
-    {
-      
+    {      
         bit = (n & num) ? 1 : 0;
-
-   
         if (bit || i == 63)
         {
             _putchar(bit + '0');
