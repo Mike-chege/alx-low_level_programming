@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 		bit = (n & (num << i)) ? 1 : 0;
 	      	if (bit || i == 63)
 		{
-	       		putchar (bit + '0');
+	       		_putchar (bit + '0');
 		}
 	}
 }
