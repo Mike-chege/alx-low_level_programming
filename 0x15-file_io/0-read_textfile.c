@@ -18,9 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	bfr = malloc(sizeof(char) * letters);
 	if (bfr == NULL)
-	{
 		return (0);
-	}
 
 	open_byts = open(filename, O_RDONLY);
 	read_byts = read(open_byts, bfr, letters);
