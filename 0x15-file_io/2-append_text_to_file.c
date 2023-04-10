@@ -17,19 +17,19 @@ int append_text_to_file(const char *filename, char *text_content)
 	
 	if (text_content != NULL)
 	{
-		for (num = 0; text__content[num]; num++)
+		for (num = 0; text_content[num]; num++)
 		{
 			/* nothing done here*/
 		}
 			
 	}
 	
-	open_byts = open(filename, O_WRONGLY | O_APPEND);
-	if (open_byts = -1)
+	open_byts = open(filename, O_WRONLY | O_APPEND);
+	if (open_byts == -1)
 		return(-1);
 
-	write_byts = write(open_file, text_content, num);
-	if (write_byts = -1)
+	write_byts = write(open_byts, text_content, num);
+	if (write_byts == -1)
 	{
 		close(open_byts);
 		return (-1);
