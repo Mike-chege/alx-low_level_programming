@@ -10,9 +10,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int open_byts;
-	int byts_write;
-       	num = 0;
+	int open_byts, byts_write, num = 0;
 
 	if (filename == NULL)
 	{
@@ -29,10 +27,11 @@ int create_file(const char *filename, char *text_content)
 	byts_write = write(open_byts, text_content, num);
 
 	if (open_byts == -1 || byts_write == -1)
-	{
+
 		return (-1);
-	}
+	
 	close(open_byts);
 
 	return (1);
 }
+
