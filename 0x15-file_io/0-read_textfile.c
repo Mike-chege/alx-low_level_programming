@@ -4,9 +4,9 @@
 /**
  * read_textfile reads - a text file and prints it to standard output.
  * @filename: the name of the file to read.
- * @letters: total number of letters to read.
+ * @letters: maximum number of letters to read.
  *
- * Return: 0 if an error occurs or the number of bytes read and printed.
+ * Return: 0 if an error occurs, or the number of bytes read and printed.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
