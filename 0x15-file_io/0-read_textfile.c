@@ -1,10 +1,12 @@
 #include"main.h"
 #include<fcntl.h>
+
 /**
- * read_textfile reads - a text file and prints it to POSIX standard output.
- * @filename: it points to the file name.
- * @letters: total number of letters to print.
- * Return: the actual number of letters it could read and print.
+ * read_textfile reads - a text file and prints it to standard output.
+ * @filename: the name of the file to read.
+ * @letters: total number of letters to read.
+ *
+ * Return: 0 if an error occurs or the number of bytes read and printed.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
