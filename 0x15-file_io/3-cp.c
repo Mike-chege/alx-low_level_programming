@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         exit(97);
     }
 
-    /* Opening the source file for reading */
+    /* Opening source file for reading */
     fd_fr = open(argv[1], O_RDONLY);
     if (fd_fr == -1)
     {
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         exit(98);
     }
 
-    /* Opening the destination file for writing */
+    /* Opening destination file for writing */
     fd_t = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
     if (fd_t == -1)
     {
