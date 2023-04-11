@@ -2,7 +2,7 @@
 #include<fcntl.h>
 #include<elf.h>
 
-#define BUFF_SIZE 64
+#define BUF_SIZE 64
 
 void print_magic(unsigned char *e_ident);
 void print_class(unsigned char e_ident[EI_NIDENT]);
