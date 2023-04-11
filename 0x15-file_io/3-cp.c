@@ -10,11 +10,6 @@
  * @argv: Is an array of pointers to the arguments.
  *
  * Return: 0 on success, or an error code if any failure.
- *
- * Description: If the argument count is incorrect, exit with code 97.
- *              If file_from does not exist or cannot be read, exit with code 98.
- *              If file_to cannot be created or written to, exit with code 99.
- *              If file_to or file_from cannot be closed, exit with code 100.
  */
 int main(int argc, char *argv[])
 {	
@@ -27,7 +22,7 @@ int main(int argc, char *argv[])
         exit(97);
     }
 
-    /* Openning the source file for reading */
+    /* Opening the source file for reading */
     fd_fr = open(argv[1], O_RDONLY);
     if (fd_fr == -1)
     {
@@ -35,7 +30,7 @@ int main(int argc, char *argv[])
         exit(98);
     }
 
-    /* Open the destination file for writing */
+    /* Opening the destination file for writing */
     fd_t = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
     if (fd_t == -1)
     {
