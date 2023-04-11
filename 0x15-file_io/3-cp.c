@@ -9,7 +9,12 @@
  * @argc: Is the number of arguments to the program.
  * @argv: Is an array of pointers to the arguments.
  *
- * Return: 0 on success, or an error code on failure.
+ * Return: 0 on success, or an error code if any failure.
+ *
+ * Description: If the argument count is incorrect, exit with code 97.
+ *              If file_from does not exist or cannot be read, exit with code 98.
+ *              If file_to cannot be created or written to, exit with code 99.
+ *              If file_to or file_from cannot be closed, exit with code 100.
  */
 int main(int argc, char *argv[])
 {	
