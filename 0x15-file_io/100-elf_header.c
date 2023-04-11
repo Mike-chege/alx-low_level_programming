@@ -1,6 +1,7 @@
 #include"main.h"
-#include<fnctl.h>
+#include<fcntl.h>
 #include<elf.h>
+
 #define BUFF_SIZE 64
 
 /**
