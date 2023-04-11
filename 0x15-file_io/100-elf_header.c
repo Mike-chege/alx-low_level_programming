@@ -4,6 +4,16 @@
 
 #define BUFF_SIZE 64
 
+void print_magic(unsigned char *e_ident);
+void print_class(unsigned char e_ident[EI_NIDENT]);
+void print_data(unsigned char e_ident[EI_NIDENT]);
+void print_version(unsigned char e_ident[EI_NIDENT]);
+void print_osabi(unsigned char e_ident[EI_NIDENT]);
+void print_abiversion(unsigned char e_ident[EI_NIDENT]);
+void print_type(Elf64_Half e_type);
+void print_entry(Elf64_Addr e_entry);
+
+
 /**
  * main - displays information contained in the ELF header.
  * @argc: Is the number of arguments passsed to tthe program.
