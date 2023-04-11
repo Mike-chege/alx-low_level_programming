@@ -11,73 +11,57 @@
  * Return: 0 if successful, or an error code on failure.
  * 
  * usage: elf_header elf_filename
- * displayed information: magic, class, data, version, OS/ABI, ABI Version,Entry point address
+ * displayed information: magic, class, data, version, OS/ABI, ABI Version,
+ * Entry point address.
  * format: is the same as readelf -h
  * if the file is not an elf exit code with 98.
  */
-int main (int argc, char *argv[])
-{
-	if (argc != 2)
-	{
-		fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
-		exit(1);
-	}
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
+        exit(1);
+    }
 
-	int fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
-	{
-		fprintf(stderr, "Error: can't open file %s\n", argv[1]);
-		exit(98);
-	}
+    int fd = open(argv[1], O_RDONLY);
+    if (fd == -1) {
+        fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+        exit(98);
+    }
 
-	unsigned char buf[Buff_size];
-	ssize_t nread = read(fd, buf, BUF_SIZE);
-	if (nread == -1)
-	{
-		fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
-		exit(1);
-	}
+    unsigned char buf[BUF_SIZE];
+    ssize_t nread;
 
-	int fd = open(argv[1], O_RONLY);
-	if (fd == -1) 
-	{
-		fprintf(stderr, "Error: can't open file %s\n", argv[1]);
-		exit(98);
-	}
+    nread = read(fd, buf, BUF_SIZE);
+    if (nread == -1) {
+        fprintf(stderr, "Error: Can't read file %s\n", argv[1]);
+        exit(98);
+    }
 
-	int fd = open(argv[1], O_RONLY);
-	if (fd == -1)
-	{ 
-		fprintf(stderr, "Error: can't open file %s\n", argv[1]);
-		exit(98);
-	}
+    Elf64_Ehdr *ehdr = (Elf64_Ehdr *) buf;
 
-	unsigned char bfr[BUFF_SIZE];
-	ssize_t readn;
+    if (ehdr->e_ident[EI_MAG0] != ELFMAG0 ||
+        ehdr->e_ident[EI_MAG1] != ELFMAG1 ||
+        ehdr->e_ident[EI_MAG2] != ELFMAG2 ||
+        ehdr->e_ident[EI_MAG3] != ELFMAG3) {
+        fprintf(stderr, "Error: %s is not an ELF file\n", argv[1]);
+        exit(98);
+    }
 
-	readn = read(fd, bfr, BUFF_SIZE);
-	if (readn == -1) 
-	{
-		fprintf(stderr, "Error: %s is not an ELF file\n", argv[1]);
-		exit(98);
-	}
+    print_magic(ehdr->e_ident);
+    print_class(ehdr->e_ident);
+    print_data(ehdr->e_ident);
+    print_version(ehdr->e_ident);
+    print_osabi(ehdr->e_ident);
+    print_abiversion(ehdr->e_ident);
+    print_type(ehdr->e_type);
+    print_entry(ehdr->e_entry);
 
-	print_magic (ehdr->e_ident);
-	print_class(ehdr->e_ident);
-	print_data(ehdr->e_ident);
-	print_version(ehdr->e_ident);
-	print_osabi(ehdr->e_ident);
-	print_abiversion(ehdr->e_ident);
-	print_type(ehdr->e_type);
-	print_entry(ehdr->e_entry);
+    close(fd);
 
-	close(fd);
-
-	return 0;
+    return 0;
 }
 
-
-oid print_magic(unsigned char *e_ident) {
+void print_magic(unsigned char *e_ident) {
     printf("  Magic:   ");
     for (int i = 0; i < EI_NIDENT; i++) {
         printf("%02x ", e_ident[i]);
@@ -165,3 +149,4 @@ void print_osabi(unsigned char e_ident[EI_NIDENT]) {
             break;
     }
 }
+
