@@ -23,7 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 				consistC++;
 			i++;
 		}
-		if (prevC == consistC) /* didn't equal a char from accept */
+		if (prevC == consistC)
 			break;
 		s++;
 	}
