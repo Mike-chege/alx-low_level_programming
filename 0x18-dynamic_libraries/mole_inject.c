@@ -1,9 +1,9 @@
-int iterations_of_rand = 0;
+int i_rand = 0;
 
 int rand()
 {
-	iterations_of_rand++;
-	switch (iterations_of_rand)
+	i_rand++;
+	switch (i_rand)
 	{
 		case 1:
 			return (9);
