@@ -1,13 +1,9 @@
 /**
- * _strncat - concatanates two strings
- *
+ * _strncat - concatanates two string
  * @dest: destination string
  * @src: string to add to end of dest
  * @n: num of bytes to take from src
- *
- * Description: only takes n bytes from src
- *
- * Return: char pointer to dest
+ * Return: char
  */
 char *_strncat(char *dest, char *src, int n)
 {

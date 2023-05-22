@@ -1,10 +1,8 @@
 #include "main.h"
 /**
  * _puts - puts string to stdout
- *
  * @str: string to print to stdout
- *
- * Return: always void
+ * Return: Nothing
  */
 void _puts(char *str)
 {
@@ -12,3 +10,4 @@ void _puts(char *str)
 		_putchar(*str++);
 	_putchar('\n');
 }
+

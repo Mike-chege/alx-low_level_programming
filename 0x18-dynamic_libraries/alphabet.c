@@ -1,8 +1,6 @@
 /**
  * _islower - print alphabet out
- *
  * @c: character
- *
  * Return: 1 if lower, 0 otherwise
  */
 int  _islower(int c)

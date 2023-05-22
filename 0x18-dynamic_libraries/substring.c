@@ -10,23 +10,23 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int i;
-	int consistC = 0;
-	int prevC;
+	int bytes = 0;
+	int temp;
 
 	while (*s)
 	{
 		i = 0;
-		prevC = consistC;
+		temp = bytes;
 		while (*(accept + i) != '\0')
 		{
 			if (*(accept + i) == *s)
-				consistC++;
+				bytes++;
 			i++;
 		}
-		if (prevC == consistC)
+		if (temp == bytes)
 			break;
 		s++;
 	}
-	return (consistC);
+	return (bytes);
 }
 
