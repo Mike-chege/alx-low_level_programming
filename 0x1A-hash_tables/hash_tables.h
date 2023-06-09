@@ -1,12 +1,5 @@
-#ifndef __HASH_TABLES_H__
-#define __HASH_TABLES_H__
-
-/* libraries */
-#include <stdio.h>
-#include <stdlib.h>
-
-/* Required Data structures */
-
+#ifndef __HASH_TABLES__
+#define __HASH_TABLES__
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -36,7 +29,6 @@ typedef struct hash_table_s
      hash_node_t **array;
 } hash_table_t;
 
-/* main prototypes */
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
@@ -45,4 +37,4 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
 
-#endif /* __HASH_TABLES_H__ */
+#endif /* __HASH_TABLES__ */
