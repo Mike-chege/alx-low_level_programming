@@ -1,10 +1,9 @@
 # Hash_Tables
 
 This project is about hash tables. How to make one, how to use hash functions and also collisions and how to resolve them.
-
 The tasks for this project are 7. 6 are mandatory while 1 is advanced.
 
-# Requiered Data Structures
+# Required Data Structures
 ```
 /**
  * struct hash_node_s - Node of a hash table
