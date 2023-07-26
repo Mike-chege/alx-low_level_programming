@@ -1,42 +1,39 @@
 #!/usr/bin/python3
 """
-This function returns the perimeter of
-An island described in grid(list of integers)
+module for interview prep, tried more efficient solution but too much
 """
 
 
 def island_perimeter(grid):
-    """
-    Returns the perimeter of the island
+    """ gets perimeter of island represented as grid
     """
     if not isinstance(grid, list):
         return 0
-    island = 0
-    for row_j, row in enumerate(grid):
+    island_p = 0
+    for row_i, row in enumerate(grid):
         if not isinstance(row, list):
             return 0
-        for column, block in enumerate(row):
+        for col_i, block in enumerate(row):
             if type(block) is not int:
                 return 0
             if block == 1:
-                island += block_sum(grid, row_j, column)
-    return island
+                island_p += get_block_sum(grid, row_i, col_i)
+    return island_p
 
 
-def block_sum(grid, rw, clmn):
+def get_block_sum(grid, r_i, c_i):
     """
-    Returns the perimeter of a block
+    gets the perimeter of a block
     """
     next_block = None
-    block_n = 4
+    block_p = 4
     try:
-        blck_1 = grid[rw][clmn + 1]
-        blck_2 = grid[rw][clmn - 1]
-        blck_3 = grid[rw - 1][clmn]
-        blck_4 = grid[rw + 1][clmn]
+        r_block = grid[r_i][c_i + 1]
+        l_block = grid[r_i][c_i - 1]
+        t_block = grid[r_i - 1][c_i]
+        b_block = grid[r_i + 1][c_i]
+    except:
+        raise ValueError("ISLAND IS NOT SURROUNDED BY WATER")
 
-    except ValueError:
-        print("Island Not Surrounded By Water")
-
-    block_n += -1 * (blck_1 + blck_2 + blck_3 + blck_4)
-    return block_n
+    block_p += -1 * (r_block + l_block + t_block + b_block)
+    return block_p
