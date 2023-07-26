@@ -23,20 +23,20 @@ def island_perimeter(grid):
     return island
 
 
-def block_sum(grid, row, column):
+def block_sum(grid, rw, clmn):
     """
     Returns the perimeter of a block
     """
     next_block = None
-    block= 4
+    block_n = 4
     try:
-        blck_1 = grid[row][column + 1]
-        blck_2 = grid[row][column - 1]
-        blck_3 = grid[row - 1][column]
-        blck_4 = grid[row + 1][column]
+        blck_1 = grid[rw][clmn + 1]
+        blck_2 = grid[rw][clmn - 1]
+        blck_3 = grid[rw - 1][clmn]
+        blck_4 = grid[rw + 1][clmn]
 
     except ValueError:
-        print("Island Not Surrounded BY Water")
+        print("Island Not Surrounded By Water")
 
-    block += -1 * (blck_1 + blck_2 + blck_3 + blck_4)
-    return block
+    block_n += -1 * (blck_1 + blck_2 + blck_3 + blck_4)
+    return block_n
