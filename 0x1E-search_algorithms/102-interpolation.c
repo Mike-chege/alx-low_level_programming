@@ -1,5 +1,6 @@
 #include "search_algos.h"
 #include <stdio.h>
+#include <math.h>
 
 /**
  * interpolation_search - Searches for a value in a sorted array
