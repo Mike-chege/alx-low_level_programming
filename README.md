@@ -14,4 +14,4 @@ Directory | Files
 [0x05-pointers_arrays_strings](https://github.com/Mike-chege/alx-low_level_programming/tree/master/0x05-pointers_arrays_strings) | 0-reset_to_98.c, 1-swap.c, 2-strlen.c, 3-puts.c, 4-print_rev.c, 5-rev_string.c, 6-puts2.c, 7-puts_half.c, 8-print_array.c, 9-strcpy.c, _putchar.c, main.h, 100-atoi.c, 101-keygen.c
 [0x07-pointers_arrays_strings](https://github.com/mikechege01/alx-low_level_programming/tree/master/0x07-pointers_arrays_strings) | C arrays and strings
 [0x08-recursion](https://github.com/Mike-chege/alx-low_level_programming/tree/master/0x08-recursion) | c recursion
-[0x09-static_libraries](https://github.com/Mike-chege/alx-low_level_programming/tree/master/0x09-static_libraries) | C static libraries
+[0x09-static_libraries](https://github.com/Mike-chege/alx-low_level_programming/tree/master/0x09-static_libraries) | C static libraries.
